@@ -3,6 +3,7 @@ module Prototypes where
 import Data.Set (Set)
 
 data Enumerability = Countable
+   | Singleton
    | Mass
    | Indefinite
    deriving (Eq, Show)
