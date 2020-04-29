@@ -6,7 +6,7 @@ import Prototypes
 apple :: Prototype
 apple = Noun
    { enumerability = Countable
-   , ownable = True
+   , associability = Associable
    , flavour = Open
    , stem = "lep"
    , glossTerm = "apple"
@@ -25,4 +25,15 @@ eat = Verb
    , meaning = "eat"
    , rootStems = empty
    , argumentMeanings = ["eater", "something edible"]
+   }
+
+person :: Prototype
+person = Noun
+   { enumerability = Countable
+   , associability = Associable
+   , flavour = Mid
+   , stem = "tat"
+   , glossTerm = "person"
+   , meaning = "person"
+   , rootStems = empty
    }

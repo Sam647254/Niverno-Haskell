@@ -1,7 +1,2 @@
-import Test.Hspec
-
-main :: IO ()
-main = hspec $ do
-   describe "..." $ do
-      it "..." $ do
-         pending
+-- file test/Spec.hs
+{-# OPTIONS_GHC -F -pgmF hspec-discover #-}

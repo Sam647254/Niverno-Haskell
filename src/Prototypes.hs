@@ -22,9 +22,14 @@ data Valency = Zero
    | Two
    deriving (Eq, Show)
 
+data Associability = Common
+   | Associable
+   | Intrinsic
+   deriving (Eq, Show)
+
 data Prototype = Noun
    { enumerability :: Enumerability
-   , ownable       :: Bool
+   , associability :: Associability
    , flavour       :: Flavour
    , stem          :: String
    , glossTerm     :: String
