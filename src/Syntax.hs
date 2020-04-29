@@ -28,3 +28,15 @@ data Sentence = PlainSentence
    , argument2 :: Maybe Argument
    }
    deriving (Eq, Show)
+
+plainArgument :: Syntax.Word -> Argument
+plainArgument word = Argument
+   { argumentWord = word
+   , descriptors = ()
+   }
+
+plainPredicate :: Syntax.Word -> Predicate
+plainPredicate word = Predicate
+   { predicateWord = word
+   , modifiers = ()
+   }

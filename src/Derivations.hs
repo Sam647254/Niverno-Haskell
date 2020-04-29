@@ -12,6 +12,9 @@ data Derivation = Nonspecific
 derive :: Prototype -> Set.Set Derivation
 derive prototype =
    let prototypes = case prototype of
-         Noun {} -> [Nonspecific, Specific, Anaphor]
-         Verb {} -> [Imperative]
+         Noun { enumerability = e } ->
+            case e of
+               Countable -> [Nonspecific, Specific, Anaphor]
+               _         -> [Specific, Anaphor]
+         Verb {}                    -> [Imperative]
    in Set.fromList prototypes

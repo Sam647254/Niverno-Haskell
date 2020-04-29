@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c8d8d8ff609a2212bb6a710a2e118b6ee3a6f8fbc3f612204c8bfb279527103d
+-- hash: ffb827a142fc4ab370e33cb20d798dede0673c813c4aa298d03f066c55095533
 
 name:           Niverno
 version:        0.1.0.0
@@ -27,7 +27,7 @@ source-repository head
 library
   exposed-modules:
       Derivations
-      Lib
+      Parser
       Prototypes
       Syntax
   other-modules:
@@ -59,6 +59,7 @@ test-suite Niverno-test
   main-is: Spec.hs
   other-modules:
       PrototypeSpec
+      SentenceSpec
       TestingDictionary
       Paths_Niverno
   hs-source-dirs:

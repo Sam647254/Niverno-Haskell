@@ -1,7 +1,11 @@
 module TestingDictionary where
 
 import Data.Set
+import Derivations
 import Prototypes
+import qualified Prototypes as P
+import Syntax
+import qualified Syntax as S
 
 apple :: Prototype
 apple = Noun
@@ -16,7 +20,7 @@ apple = Noun
 
 eat :: Prototype
 eat = Verb
-   { receiver = Single
+   { P.receiver = Single
    , valency = One
    , instantaneous = True
    , integral = False
@@ -36,4 +40,22 @@ person = Noun
    , glossTerm = "person"
    , meaning = "person"
    , rootStems = empty
+   }
+
+aPerson :: S.Word
+aPerson = S.Word
+   { prototype = person
+   , derivation = Specific
+   }
+
+anApple :: S.Word
+anApple = S.Word
+   { prototype = apple
+   , derivation = Nonspecific
+   }
+
+eatImp :: S.Word
+eatImp = S.Word
+   { prototype = eat
+   , derivation = Imperative
    }
