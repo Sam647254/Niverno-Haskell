@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5bb32bf41dad6729b52a9300049a82ba80d92dcd56bc132cf64148ee9a278538
+-- hash: 599cf9399abf8796675aacdd487f99372c973b199e6f42f5d079355599c87643
 
 name:           Niverno
 version:        0.1.0.0
@@ -29,7 +29,7 @@ library
       Derivations
       Lib
       Prototypes
-      Words
+      Syntax
   other-modules:
       Paths_Niverno
   hs-source-dirs:
@@ -37,6 +37,7 @@ library
   build-depends:
       base >=4.7 && <5
     , containers
+    , hspec
   default-language: Haskell2010
 
 executable Niverno-exe
@@ -50,12 +51,14 @@ executable Niverno-exe
       Niverno
     , base >=4.7 && <5
     , containers
+    , hspec
   default-language: Haskell2010
 
 test-suite Niverno-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      TestingDictionary
       Paths_Niverno
   hs-source-dirs:
       test
@@ -64,4 +67,5 @@ test-suite Niverno-test
       Niverno
     , base >=4.7 && <5
     , containers
+    , hspec
   default-language: Haskell2010

@@ -1,6 +1,6 @@
 module Derivations where
 
-data Derivation = Singular
-   | Plural
-   | Archetype
+data Derivation = Nonspecific
+   | Specific
+   | Imperative
    deriving (Eq, Show)
