@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 441d9a44af2e42c9cd09d7d71b99a83c085224f4e870c29d59bb40f1e959218e
+-- hash: 376a8ff79c997d76dbf38da522fa6ed838c582723146f6f70d0a9e006c3c4582
 
 name:           Niverno
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Prototypes
   other-modules:
       Paths_Niverno
   hs-source-dirs:
