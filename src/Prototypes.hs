@@ -5,19 +5,23 @@ import Data.Set (Set)
 data Enumerability = Countable
    | Mass
    | Indefinite
+   deriving (Eq, Show)
 
 data Flavour = Open
    | Mid
+   deriving (Eq, Show)
 
 data Receiver = Single
    | Multiple
    | Global
+   deriving (Eq, Show)
 
 data Valency = Zero
    | One
    | Two
+   deriving (Eq, Show)
 
-data Protoype = Noun
+data Prototype = Noun
    { enumerability :: Enumerability
    , ownable       :: Bool
    , flavour       :: Flavour
@@ -34,6 +38,7 @@ data Protoype = Noun
    , creation         :: Bool
    , stem             :: String
    , meaning          :: String
-   , rootStems        :: String
-   , argumentMeanings :: List String
+   , rootStems        :: Set String
+   , argumentMeanings :: [String]
    }
+   deriving (Eq, Show)

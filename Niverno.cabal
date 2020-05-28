@@ -1,21 +1,20 @@
-cabal-version: 1.12
+cabal-version: 2.2
 
 -- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 376a8ff79c997d76dbf38da522fa6ed838c582723146f6f70d0a9e006c3c4582
+-- hash: 5bb32bf41dad6729b52a9300049a82ba80d92dcd56bc132cf64148ee9a278538
 
 name:           Niverno
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/Niverno#readme>
-homepage:       https://github.com/githubuser/Niverno#readme
-bug-reports:    https://github.com/githubuser/Niverno/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
-license:        BSD3
-license-file:   LICENSE
+description:    Please see the README on GitHub at <https://github.com/sam647254/Niverno#readme>
+homepage:       https://github.com/sam647254/Niverno#readme
+bug-reports:    https://github.com/sam647254/Niverno/issues
+author:         Sam Wang
+maintainer:     samofcorinth@gmx.ca
+copyright:      2020 Sam Wang
+license:        Unlicense
 build-type:     Simple
 extra-source-files:
     README.md
@@ -23,18 +22,21 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/Niverno
+  location: https://github.com/sam647254/Niverno
 
 library
   exposed-modules:
+      Derivations
       Lib
       Prototypes
+      Words
   other-modules:
       Paths_Niverno
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable Niverno-exe
@@ -47,6 +49,7 @@ executable Niverno-exe
   build-depends:
       Niverno
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 test-suite Niverno-test
@@ -60,4 +63,5 @@ test-suite Niverno-test
   build-depends:
       Niverno
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
